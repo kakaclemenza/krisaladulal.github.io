@@ -1,4 +1,10 @@
-body {background-color:antiquewhite;}
-#nav a{text-decoration: none; }
-img {height: 2cm; width: 2cm;}
-#size summary{font-size: 30px; }
+body {background-color:rgb(247, 232, 212); }
+#nav a{text-decoration: solid; }
+img { object-fit: cover; width: 230px; height: 230px; }
+#size summary{font-size: 30px; text-align: start;}
+#size p,h2,li{text-align: center;}
+
+/* #side h3{text-align: center;} */
+p{text-align: center;}
+
+form{text-align: center;}
