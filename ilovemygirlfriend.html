@@ -1,78 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I Love My Girlfriend</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        font-family: "Courier New", Courier, monospace;
+        margin: 0;
+        text-align: center;
+      }
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        max-width: 90%;
+        width: 600px;
+        box-sizing: border-box;
+      }
+      h1 {
+        color: #ff69b4;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+      }
+      p {
+        color: #333;
+        font-size: 1.2em;
+        margin: 10px 0;
+        overflow: hidden; /* Hide overflow */
+        white-space: nowrap; /* Keep text on one line */
+        border-right: 2px solid; /* Typing cursor effect */
+        animation: typing 4s steps(40, end);
+      }
+      /* Typing animation */
+      @keyframes typing {
+        from {
+          width: 0;
         }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            text-align: center;
+        to {
+          width: 100%;
         }
-        h1 {
-            color: #ff69b4;
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-        }
-        p {
-            color: #333;
-            font-size: 1.3em;
-            margin: 10px 0;
-        }
-        .warning {
-            color: #ff6347;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 30px;
-        }
-        .warning span {
-            color: #ff69b4;
-            font-size: 1.5em;
-            display: block;
-            margin-top: 10px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            margin-top: 20px;
-            transition: transform 0.2s ease;
-        }
-        img:hover {
-            transform: scale(1.05);
-            cursor: pointer;
-        }
+      }
+      .warning {
+        color: #ff6347;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-top: 20px;
+        display: none;
+      }
+      .warning span {
+        color: #ff69b4;
+        font-size: 1.4em;
+        display: block;
+        margin-top: 10px;
+      }
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 15px;
+        margin-top: 20px;
+        transition: transform 0.2s ease;
+      }
+      img:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
     </style>
     <script>
-        function changeImage() {
-            var img = document.getElementById('gfImage');
-            img.src = 'https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif';
-            alert("Don't even think about it! My girlfriend is mine!");
-        }
+      function showWarning() {
+        var img = document.getElementById("gfImage");
+        var warningText = document.getElementById("warningText");
+        img.src =
+          "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnBtZWQwZnhyY3gweW9nMWhsanZxZnd0eDJsNHE3anU3ZzF2anRjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3XlEk2RxPS1m8/giphy.gif";
+        warningText.style.display = "block";
+        var gw = document.getElementById("gfsec");
+        gw.src =
+          "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenh1cHFjYnI0dHI5N29ibW9pcWltMGo2bnNkODd4MzduMWRzejNmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11tTNkNy1SdXGg/giphy.gif";
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>I love my girlfriend!</h1>
-        <p>She is the light of my life and the joy of my heart. Every moment with her is a blessing, and I cherish her beyond words.</p>
-        <img id="gfImage" src="https://via.placeholder.com/400x400.png?text=My+Girlfriend" alt="My Girlfriend" onclick="changeImage()">
-        <p class="warning">Hey! You there!<br>
-            <span>Don't even think about it!</span><br>
-            My girlfriend is mine, and I won't hesitate to unleash the wrath of Batman on you!</p>
+      <h1>I love my girlfriend!</h1>
+      <p id="typewriter">She is everything I've ever dreamed of.</p>
+      <img
+        id="gfImage"
+        src="kri.jpg"
+        alt="My Girlfriend"
+        onmouseover="showWarning()"
+      />
+      <img
+        id="gfsec"
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmMzOWd3MmJsaW52M3prMHF0d3dwc2tqbnFiazJxZ3RudnEybmk5bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEjHICDl30tEYF5Oo/giphy.gif"
+        alt="Adoring GIF"
+      />
+      <div id="warningText" class="warning">
+        Hey! You there!<br />
+        <span>She's my girlfriend!</span><br />
+        Don't even think about it, or you'll have to deal with me!
+      </div>
     </div>
-</body>
+  </body
+
 </html>
